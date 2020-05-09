@@ -28,42 +28,42 @@
             }
 
 
-            if($n==$p)
-                {
-	                 echo "the multiplication is: "."<br>";
-	                     $result =array();
-	                         for ($i=0; $i <$m ; $i++) 
-	                            { 
-		                             for ($j=0; $j <$q ; $j++)
-		                                { 
-			                                 $result[$i][$j]=0;
+   if($n==$p)
+   {
+	echo "the multiplication is: "."<br>";
+	       $result =array();
+	          for ($i=0; $i <$m ; $i++) 
+	               { 
+		           for ($j=0; $j <$q ; $j++)
+		                { 
+			            $result[$i][$j]=0;
 
-			                                     for ($k=0; $k <$n ; $k++) 
-				                                     $result[$i][$j]+=$matrix1[$i][$k]*$matrix2[$k][$j];
+			              for ($k=0; $k <$n ; $k++) 
+				          $result[$i][$j]+=$matrix1[$i][$k]*$matrix2[$k][$j];
 		                                }
 	                            }
 
-	                                                     for ($row=0; $row <$m ; $row++) 
-	                                                        { 
-	                                                            for ($col=0; $col <$q ; $col++)  
-	  	                                                             echo " ".$result[$row][$col];
-	                                                                     echo "<br>";
-	                                                        }
+	      for ($row=0; $row <$m ; $row++) 
+	          { 
+	             for ($col=0; $col <$q ; $col++)  
+	  	         echo " ".$result[$row][$col];
+	                      echo "<br>";
+	                              }
 
-                                                             $arrDiag =count($result);
-	                                                             $firstD = 0;
-                                                                     $secondD = 0;
-                                                                         //echo $arrDiag."<br>";
+           $arrDiag =count($result);
+	           $firstD = 0;
+                       $secondD = 0;
+                         //echo $arrDiag."<br>";
 
-                                                                         $i = 0;
-                                                                             for($j = 0; $j < $arrDiag; $j++)
-                                                                                {
-                                                                                     $firstD +=$result[$i++][$j];
-                                                                                         $secondD +=$result[$arrDiag - $i][$j];
-                                                                                }
-                                                                                    echo "the diagonal addtion of matrix:"."<br>";
-                                                                                         echo "First diagonal additon"." ".$firstD."<br>";
-                                                                                             echo "Second diagonal addtion"." ".$secondD;
+                            $i = 0;
+                              for($j = 0; $j < $arrDiag; $j++)
+                                 {
+                                     $firstD +=$result[$i++][$j];
+                                        $secondD +=$result[$arrDiag - $i][$j];
+                                             }
+                                     echo "the diagonal addtion of matrix:"."<br>";
+                                     echo "First diagonal additon"." ".$firstD."<br>";
+                                echo "Second diagonal addtion"." ".$secondD;
                 }
 
 ?>
